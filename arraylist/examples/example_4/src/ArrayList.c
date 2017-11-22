@@ -71,25 +71,12 @@ ArrayList* al_newArrayList(void)
 int al_add(ArrayList* this, void* pElement)//2
 {
     int returnAux=-1;
-    void** lista;
-    int flag=0;
+    //void** lista;
+    //int flag=0;
 
         if(this!=NULL && pElement!=NULL)
         {
-            if(this->reservedSize==this->size)
-            {
-                lista=(void**) realloc(this->pElements, sizeof(void*)*(this->reservedSize+AL_INCREMENT));
-                if(lista!=NULL)
-                {
-                    this->pElements=lista;
-                    this->reservedSize=this->reservedSize+AL_INCREMENT;
-                }
-                else
-                {
-                    flag=-1;
-                }
-            }
-            if(flag==0)
+            if(resizeUp(this)==0)
             {
                 this->pElements[this->size]=pElement;
                 this->size++;
@@ -238,18 +225,15 @@ int al_set(ArrayList* this, int index,void* pElement)//7
 int al_remove(ArrayList* this, int index)//8
 {
     int returnAux = -1;
-    int i;
 
     if(this!=NULL && this->pElements!=NULL)
     {
         if(index>=0 && index<this->size)
         {
-            for(i=index; i<this->size; i++)
+            if(contract(this, index)==0)
             {
-                this->pElements[i]=this->pElements[i+1];
+                 returnAux=0;
             }
-            this->size=this->size-1;
-            returnAux=0;
         }
     }
 
@@ -482,10 +466,12 @@ int al_containsAll(ArrayList* this, ArrayList* this2)//16
               break;
            }
         }
-    }
-    else
-    {
-        returnAux=-1;
+        if(flag){
+            returnAux = 0;
+        }
+        else{
+            returnAux = 1;
+        }
     }
 
     return returnAux;

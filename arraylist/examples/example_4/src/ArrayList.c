@@ -571,13 +571,13 @@ int resizeDown(ArrayList* this)
 
     if(this!=NULL)
     {
-        if(this->size==this->reservedSize)
+        if((this->reservedSize-this->size)>AL_INCREMENT)
         {
-            auxThis=(void**) realloc(this->pElements, sizeof(void*)*(this->reservedSize+AL_INCREMENT));
+            auxThis=(void**) realloc(this->pElements, sizeof(void*)*(this->reservedSize-AL_INCREMENT));
 
             if(auxThis!=NULL)
             {
-                this->reservedSize+=AL_INCREMENT;
+                this->reservedSize-=AL_INCREMENT;
                 this->pElements=auxThis;
                 returnAux=0;
             }

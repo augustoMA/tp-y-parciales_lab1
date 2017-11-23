@@ -563,7 +563,11 @@ int resizeUp(ArrayList* this)
 }
 
 
-
+/** \brief Decrement the number of elements in pList in AL_INCREMENT elements.
+ * \param pList ArrayList* Pointer to arrayList
+ * \return int Return (-1) if Error [pList is NULL pointer or if can't allocate memory]
+ *                  - (0) if ok
+ */
 int resizeDown(ArrayList* this)
 {
     int returnAux = -1;

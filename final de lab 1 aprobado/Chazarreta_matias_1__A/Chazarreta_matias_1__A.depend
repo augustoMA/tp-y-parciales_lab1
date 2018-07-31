@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1532527261 source:c:\users\alumno\desktop\chazarreta_matias_1__a\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529313140 c:\users\alumno\desktop\chazarreta_matias_1__a\arraylist.h
+
+1532528644 source:c:\users\alumno\desktop\chazarreta_matias_1__a\letra.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"ArrayList.h"
+	"letra.h"
+	"parser.h"
+
+1532527936 c:\users\alumno\desktop\chazarreta_matias_1__a\letra.h
+
+1532520330 c:\users\alumno\desktop\chazarreta_matias_1__a\parser.h
+
+1532528583 source:c:\users\alumno\desktop\chazarreta_matias_1__a\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"letra.h"
+	"parser.h"
+
+1532522457 source:c:\users\alumno\desktop\chazarreta_matias_1__a\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"letra.h"
+	"parser.h"
+

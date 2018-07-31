@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1531310963 source:c:\users\alumno\desktop\chazarreta_matias\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529313140 c:\users\alumno\desktop\chazarreta_matias\arraylist.h
+
+1531317114 source:c:\users\alumno\desktop\chazarreta_matias\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"parser.h"
+	"numeroNatural.h"
+
+1531320520 source:c:\users\alumno\desktop\chazarreta_matias\numeronatural.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"numeroNatural.h"
+	"ArrayList.h"
+
+1531316946 c:\users\alumno\desktop\chazarreta_matias\numeronatural.h
+	"ArrayList.h"
+
+1531313145 source:c:\users\alumno\desktop\chazarreta_matias\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"numeroNatural.h"
+
+1531311527 c:\users\alumno\desktop\chazarreta_matias\parser.h
+

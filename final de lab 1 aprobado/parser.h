@@ -1,0 +1,2 @@
+
+int parserNumero(char*,ArrayList*);
